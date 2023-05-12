@@ -10,9 +10,9 @@ public class Util {
     private static final String URL = "jdbc:mysql://localhost:3306/new_pp1";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "red007ph37";
+    private static Connection connection = null;
 
     public static Connection getConnection() {
-        Connection connection = null;
         try {
             Class.forName(DRIVER);
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
